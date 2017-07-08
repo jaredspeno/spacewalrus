@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.spacewalrus;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
