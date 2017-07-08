@@ -61,6 +61,7 @@ public class Questions {
 		existingQuestion.setContent(question.getContent());
 		existingQuestion.setTitle(question.getTitle());
 		existingQuestion.setUserId(question.getUserId());
+		existingQuestion.setTags(question.getTags());
 		questionRepository.save(existingQuestion);
 		
 		return question;
