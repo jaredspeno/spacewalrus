@@ -12,6 +12,7 @@ public class JerseyConfig extends ResourceConfig {
 
 	public JerseyConfig(){
 		register(HelloController.class);
+		register(Questions.class);
 		property(ServletProperties.FILTER_FORWARD_ON_404, true);
 	}
 }
