@@ -10,7 +10,6 @@ import {header} from './app/header/header';
 import {question} from './app/question/question';
 
 import './index.scss';
-import 'bootstrap/dist/css/bootstrap.css';
 
 angular
   .module('app', [techsModule, 'ui.router', 'ui.bootstrap'])
