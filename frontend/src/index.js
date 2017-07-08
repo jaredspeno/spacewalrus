@@ -8,9 +8,10 @@ import routesConfig from './routes';
 import {main} from './app/main';
 import {header} from './app/header/header';
 import {question} from './app/question/question';
+// import {nwbolt} from './bolt-bootstrap';
 
 import './index.scss';
-import 'bootstrap/dist/css/bootstrap.css';
+import './bolt-bootstrap-lite.css';
 
 angular
   .module('app', [techsModule, 'ui.router', 'ui.bootstrap'])

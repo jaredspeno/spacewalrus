@@ -1,3 +1,9 @@
 export const question = {
-  template: require('./question.html')
+  template: require('./question.html'),
+  bindings: {
+    question: '<'
+  },
+  controller() {
+
+  }
 };
