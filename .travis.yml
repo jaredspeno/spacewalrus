@@ -7,3 +7,12 @@ install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
 - mvn test
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESS_KEY_ID
+  secret_access_key:
+    secure: $SECRET_ACCESS_KEY"
+  region: "us-east-1"  
+  app: $APP_NAME
+  env: $APP_ENV
+  bucket_name: $BUCKET_NAME
