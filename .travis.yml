@@ -17,4 +17,5 @@ deploy:
   app: $APP_NAME
   env: $APP_ENV
   bucket_name: $BUCKET_NAME
+  skip_cleanup: true
   only_create_app_version: "true"
