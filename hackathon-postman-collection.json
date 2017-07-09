@@ -1,0 +1,113 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hackathon",
+		"_postman_id": "dbc306d4-481d-e0d0-62bb-b9b23abfd2a1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a question",
+			"request": {
+				"url": "localhost:5000/questions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"fantastic question\",\r\n    \"content\": \"best. question. ever.\",\r\n    \"userId\": \"admin\",\r\n    \"tags\": [\r\n    \t\"1\", \"2\", \"3\"\r\n    \t],\r\n    \"answers\": [\r\n        {\r\n            \"content\": \"dude totes the answer\",\r\n            \"userId\": \"adsmin\",\r\n            \"voteCount\": 1,\r\n            \"chosen\": true\r\n        },\r\n        {\r\n            \"content\": \"bro totes the answerrrrr\",\r\n            \"userId\": \"adsmin\",\r\n            \"voteCount\": 1,\r\n            \"chosen\": false\r\n        }\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all questions",
+			"request": {
+				"url": "localhost:5000/questions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get question by Id",
+			"request": {
+				"url": "localhost:5000/questions/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update question by ID",
+			"request": {
+				"url": "localhost:5000/questions/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questionId\": 3,\n    \"title\": \"best question\",\n    \"content\": \"totally updated question\",\n    \"userId\": \"userY\",\n    \"tags\" : [\n    \t\"fun\", \n    \t\"food\", \n    \t\"fight\"\n    \t],\n\t\"answers\": [\n        {\n            \"content\": \"dude totes the answer\",\n            \"userId\": \"adsmin\",\n            \"voteCount\": 1,\n            \"chosen\": true\n        },\n        {\n            \"content\": \"bro totes the answerrrrr\",\n            \"userId\": \"adsmin\",\n            \"voteCount\": 1,\n            \"chosen\": false\n        }\n    ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add an answer to a question",
+			"request": {
+				"url": "localhost:5000/questions/2/answers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"probably the best answer by far\",\r\n    \"userId\": \"adsmin\",\r\n    \"voteCount\": 4,\r\n    \"chosen\": true\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update an answer for a question",
+			"request": {
+				"url": "localhost:5000/questions/2/answers/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"edited answer\",\r\n    \"userId\": \"adsmin\",\r\n    \"voteCount\": 3,\r\n    \"chosen\": true\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
