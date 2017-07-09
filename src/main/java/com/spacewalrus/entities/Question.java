@@ -2,6 +2,7 @@ package com.spacewalrus.entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -9,13 +10,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class Question {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long questionId;
+	private Long id;
 
 	private String title;
 	private String content;
@@ -23,20 +28,11 @@ public class Question {
 
 	@ElementCollection(fetch=FetchType.EAGER)
 	@Column(name="tags")
-//	@CollectionTable(name = "TAG", joinColumns = @JoinColumn(name = "TAG_ID"))
 	private List<String> tags;
-
-	// @OneToMany(mappedBy="tagId")
-	// private List<Tag> tags;
-
-
-	public Long getQuestionId() {
-		return questionId;
-	}
-
-	public void setQuestionId(Long questionId) {
-		this.questionId = questionId;
-	}
+	
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(cascade=CascadeType.ALL)
+	private List<Answer> answers;
 
 	public String getTitle() {
 		return title;
@@ -54,12 +50,6 @@ public class Question {
 		this.content = content;
 	}
 
-	// public List<Tag> getTags() {
-	// return tags;
-	// }
-	// public void setTags(List<Tag> tags) {
-	// this.tags = tags;
-	// }
 	public String getUserId() {
 		return userId;
 	}
@@ -74,5 +64,21 @@ public class Question {
 
 	public void setTags(List<String> tags) {
 		this.tags = tags;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<Answer> getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
 	}
 }
