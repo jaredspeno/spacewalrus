@@ -1,14 +1,11 @@
 export const main = {
   template: require('./main.html'),
-  controller() {
-    this.question = {
-      questionId: 42,
-      title: 'I am a question TITLE!',
-      content: 'WOOOOOHOOO!',
-      userId: 'SHAYKOG',
-      tags: [
-        'java', 'woot'
-      ]
-    };
+  controller($log, $http) {
+    const $ctrl = this;
+    $ctrl.questions = [];
+    $log.debug('HELLO!');
+    $http.get('http://localhost:5000/questions').then(resp => {
+      $ctrl.questions = resp.data;
+    });
   }
 };

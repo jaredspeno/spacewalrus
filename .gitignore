@@ -9,6 +9,10 @@ target/
 .settings
 .springBeans
 
+### Jetbrains ###
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -21,8 +25,10 @@ build/
 nbbuild/
 dist/
 nbdist/
-.nb-gradle/
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+.nb-gradle/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+

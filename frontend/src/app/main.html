@@ -1,6 +1,8 @@
 <header></header>
 <main class="main">
   <div class="container">
-    <question question="$ctrl.question"></question>
+    <div ng-repeat="question in $ctrl.questions">
+      <question question="question"></question>
+    </div>
   </div>
 </main>

@@ -18,4 +18,7 @@ angular
   .config(routesConfig)
   .component('app', main)
   .component('header', header)
-  .component('question', question);
+  .component('question', question)
+  .config($logProvider => {
+    $logProvider.debugEnabled(true);
+  });
