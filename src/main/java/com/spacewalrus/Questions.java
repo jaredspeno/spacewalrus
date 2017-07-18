@@ -13,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.spacewalrus.entities.Answer;
 import com.spacewalrus.entities.Question;
@@ -20,7 +21,7 @@ import com.spacewalrus.repository.AnswerRepository;
 import com.spacewalrus.repository.QuestionRepository;
 
 @Controller
-@Path("/questions")
+@Path("/api/questions")
 public class Questions {
 
 	@Autowired

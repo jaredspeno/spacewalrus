@@ -1,3 +1,45 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+$color-primary: #1c56a4;
 
+@import "~milligram-sass/dist/milligram.sass";
+
+$header-height: 54px;
+
+body {
+  background: #fafafa;
+  margin: 0;
+}
+
+@import "app/question/question";
+@import "app/tag/tag";
+
+.container-panel {
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.04);
+  padding: 2.5em;
+}
+
+header {
+  background: #FFF;
+  border-bottom: .1rem solid #d1d1d1;
+  display: block;
+  height: $header-height;
+  left: 0;
+  max-width: 100%;
+  padding-top: 8px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  .search {
+    margin-bottom: 0;
+  }
+}
+
+app {
+  display: block;
+  margin-top: $header-height;
+  padding-top: 2em;
+}

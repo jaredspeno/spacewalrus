@@ -1,0 +1,6 @@
+<div class="question" ng-repeat="question in $ctrl.questions">
+  <a class="title" href="">{{ question.title }}</a>
+  <div class="tags">
+    <tag ng-repeat="tag in question.tags" tag="tag"></tag>
+  </div>
+</div>

@@ -1,9 +1,6 @@
-export const question = {
+export default {
   template: require('./question.html'),
   bindings: {
     question: '<'
-  },
-  controller() {
-
   }
 };

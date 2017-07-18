@@ -1,12 +1,10 @@
-<div class="page-header">
-  <h1>{{$ctrl.question.title}}</h1>
-</div>
+<h1>{{$ctrl.question.title}}</h1>
 <div class="row">
-  <div class="col-md-10">
-    <div class="content">{{$ctrl.question.content}}</div>
+  <div class="column">
+    {{$ctrl.question.content}}
   </div>
-  <div class="col-md-2">
-    <h2 class="h3">Tags:</h2>
+  <div class="column">
+    Tags:
     <span ng-repeat="tag in $ctrl.question.tags" class="label label-default">{{tag}}</span>
   </div>
 </div>

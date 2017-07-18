@@ -1,24 +1,24 @@
 import angular from 'angular';
 
-import {techsModule} from './app/techs/index';
 import 'angular-ui-router';
-import 'angular-ui-bootstrap';
 import routesConfig from './routes';
 
-import {main} from './app/main';
-import {header} from './app/header/header';
-import {question} from './app/question/question';
-// import {nwbolt} from './bolt-bootstrap';
+import main from './app/main';
+import header from './app/header/header';
+import question from './app/question/question';
+import tag from './app/tag/tag';
+import questionList from './app/question/question-list';
 
 import './index.scss';
-import './bolt-bootstrap-lite.css';
 
 angular
-  .module('app', [techsModule, 'ui.router', 'ui.bootstrap'])
+  .module('app', ['ui.router'])
   .config(routesConfig)
   .component('app', main)
   .component('header', header)
   .component('question', question)
+  .component('tag', tag)
+  .component('questionList', questionList)
   .config($logProvider => {
     $logProvider.debugEnabled(true);
   });
